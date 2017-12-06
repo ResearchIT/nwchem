@@ -1,0 +1,31 @@
+#%Module 1.0
+source /opt/rit/modules/library.tcl
+
+#=====
+# Variables
+#=====
+set name        nwchem
+set version     6.6
+set progdir     /opt/rit/app/${name}/${version}
+set description "$name - $version"
+set notes       "NWChem aims to provide its users with computational chemistry tools that are scalable both in their ability to treat large scientific computational chemistry problems efficiently, and in their use of available parallel computing resources from high-performance parallel supercomputers to conventional workstation clusters."
+set homepage    "http://www.nwchem-sw.org/index.php/Main_Page"
+set download    "http://www.nwchem-sw.org/index.php/Download#NWChem_6.6_Source_Code"
+set helpcommand "Documentation is available online "
+set contact     "researchit@iastate.edu"
+set parallelism ""
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+module load openmpi/1
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin:${progdir}
+
+if { [ module-info mode load ] } {
+    ModulesHelp
+}
+
