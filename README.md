@@ -15,7 +15,7 @@ Testing was performed with openmpi 1.10.6.
 
 Run example:
 
-mpirun -np 2 singularity exec shub://ResearchIT/nwchem:6.6-openmpi nwchem_openmpi test.nw
+mpirun -np 2 singularity run shub://ResearchIT/nwchem:6.6-openmpi test.nw
 
 ## Alternative method:
 use the provided bash wrapper and module file to use the nwchem singularity container like a standard module
