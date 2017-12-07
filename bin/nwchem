@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-singularity exec /opt/rit/app/nwchem/6.6/nwchem-centos7.img nwchem_openmpi $@
+singularity run /opt/rit/app/nwchem/6.6/nwchem-centos7.img $@
