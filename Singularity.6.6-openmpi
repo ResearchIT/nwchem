@@ -13,7 +13,7 @@ PATH=/usr/lib64/openmpi/bin/:$PATH
 export PATH
 
 %runscript
-nwchem_openmpi
+nwchem_openmpi "$@"
 
 %post
  yum -y install epel-release
