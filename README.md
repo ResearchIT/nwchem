@@ -24,4 +24,5 @@ use the provided bash wrapper and module file to use the nwchem singularity cont
 e.g.
 
 module load nwchem/6.6
+
 mpirun -np 2 nwchem test.nw
